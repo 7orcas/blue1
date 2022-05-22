@@ -1,4 +1,4 @@
-package com.example;
+package com.sevenorcas;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.example.cart;
+package com.sevenorcas.cart;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;

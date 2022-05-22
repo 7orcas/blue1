@@ -1,8 +1,5 @@
 package com.example.it;
 
-import com.example.cart.Basket;
-import com.example.cart.OrderItem;
-import com.example.cart.PurchaseOrder;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -11,6 +8,10 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import com.sevenorcas.cart.Basket;
+import com.sevenorcas.cart.OrderItem;
+import com.sevenorcas.cart.PurchaseOrder;
 
 import javax.annotation.Resource;
 import javax.ejb.EJB;

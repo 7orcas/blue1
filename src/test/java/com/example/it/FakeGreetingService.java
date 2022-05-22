@@ -1,9 +1,9 @@
 package com.example.it;
 
-import com.example.GreetingMessage;
-import com.example.GreetingService;
-
 import javax.enterprise.context.ApplicationScoped;
+
+import com.sevenorcas.GreetingMessage;
+import com.sevenorcas.GreetingService;
 
 @ApplicationScoped
 public class FakeGreetingService implements GreetingService {

@@ -1,4 +1,4 @@
-package com.example.cart;
+package com.sevenorcas.cart;
 
 import java.io.Serializable;
 import java.util.ArrayList;

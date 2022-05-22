@@ -1,4 +1,4 @@
-package com.example.cart;
+package com.sevenorcas.cart;
 
 import javax.ejb.Remove;
 import javax.ejb.Stateful;

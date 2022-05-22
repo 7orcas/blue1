@@ -1,4 +1,4 @@
-package com.example.jms;
+package com.sevenorcas.jms;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

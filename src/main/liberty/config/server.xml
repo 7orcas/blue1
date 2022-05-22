@@ -46,7 +46,7 @@
         <properties.wasJms queueName="HelloQueue"/>
     </jmsQueue>
 
-    <jmsActivationSpec id="jakartaee8-starter/HelloConsumer">
+    <jmsActivationSpec id="blue/HelloConsumer">
         <properties.wasJms
                 destinationRef="jms/HelloQueue"
                 destinationType="javax.jms.Queue"

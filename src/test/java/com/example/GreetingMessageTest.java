@@ -2,6 +2,8 @@ package com.example;
 
 import org.junit.Test;
 
+import com.sevenorcas.GreetingMessage;
+
 import static org.junit.Assert.assertTrue;
 
 public class GreetingMessageTest {

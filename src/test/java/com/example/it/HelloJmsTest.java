@@ -1,7 +1,5 @@
 package com.example.it;
 
-import com.example.jms.HelloSender;
-import com.example.jms.JmsResources;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -9,6 +7,9 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import com.sevenorcas.jms.HelloSender;
+import com.sevenorcas.jms.JmsResources;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;

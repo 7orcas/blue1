@@ -1,4 +1,4 @@
-package com.example.cart;
+package com.sevenorcas.cart;
 
 public class OrderItemDtoAssembler {
     static OrderItemDto toDto(OrderItem item) {

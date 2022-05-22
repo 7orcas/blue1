@@ -1,4 +1,4 @@
-package com.example;
+package com.sevenorcas;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.time.LocalDateTime;

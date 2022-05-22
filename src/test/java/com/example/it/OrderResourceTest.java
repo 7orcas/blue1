@@ -1,7 +1,5 @@
 package com.example.it;
 
-import com.example.JaxrsActivator;
-import com.example.cart.*;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -12,6 +10,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import com.sevenorcas.JaxrsActivator;
+import com.sevenorcas.cart.*;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;

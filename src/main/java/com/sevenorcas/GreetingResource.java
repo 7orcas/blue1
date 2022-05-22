@@ -1,4 +1,4 @@
-package com.example;
+package com.sevenorcas;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 import static javax.ws.rs.core.Response.ok;
 
-@Path("greeting")
+@Path("xxyyzz")
 @RequestScoped
 public class GreetingResource {
 

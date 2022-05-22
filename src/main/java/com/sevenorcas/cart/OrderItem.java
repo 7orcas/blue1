@@ -1,4 +1,4 @@
-package com.example.cart;
+package com.sevenorcas.cart;
 
 import javax.persistence.*;
 import java.io.Serializable;
