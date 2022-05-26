@@ -8,6 +8,6 @@ public class SimpleGreetingService implements GreetingService {
 
     @Override
     public GreetingMessage buildGreetingMessage(String name) {
-        return GreetingMessage.of("Say Hello to " + name + " at " + LocalDateTime.now());
+        return GreetingMessage.of("Say Gidday to " + name + " @ " + LocalDateTime.now());
     }
 }

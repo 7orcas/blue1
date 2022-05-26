@@ -1,4 +1,4 @@
-package com.example;
+package com.sevenorcas;
 
 import org.junit.Test;
 

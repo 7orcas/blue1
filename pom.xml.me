@@ -42,17 +42,7 @@
         <jsonassert.version>1.5.0</jsonassert.version>
         <assertj.version>3.22.0</assertj.version>
 
-        <!-- Glassfish server DELETE 
-        <arquillian-glassfish.version>1.0.2</arquillian-glassfish.version>
-        <jersey.version>2.35</jersey.version>
-		-->
-		
-        <!-- Payara server DELETE 
-        <arquillian-payara.version>2.4.6</arquillian-payara.version>
-		-->
-
         <!-- Wildfly server -->
-        <wildfly-deployment-path>/opt/wildfly/standalone/deployments/</wildfly-deployment-path>
         <wildfly.version>26.1.0.Final</wildfly.version>
         <wildfly-maven-plugin.version>3.0.0.Final</wildfly-maven-plugin.version>
         <!-- Only WildFly embedded adapter 4.0.0.Alpha1 works with WildFly 24+ -->
@@ -60,18 +50,6 @@
         <!-- websockets-jsr and resteasy for client, aligned with Wildfly version. -->
         <undertow-websockets-jsr.version>2.1.3.Final</undertow-websockets-jsr.version>
         <resteasy.version>4.6.0.Final</resteasy.version>
-
-        <!-- OpenLiberty server DELETE
-        <liberty.runtime.version>22.0.0.5</liberty.runtime.version>
-         WARNING: 10.15.x.x does not work with openliberty 20.0.0.1 
-         Root exception is java.sql.SQLNonTransientException:
-        DSRA4000E: No implementations of org.apache.derby.jdbc.EmbeddedXADataSource40 are found
-        for dataSource[DefaultDataSource] with library derbyJDBCLib.
-        <derby.version>10.14.2.0</derby.version>
-        <liberty-maven-plugin.version>3.5.2</liberty-maven-plugin.version>
-        <arquillian-liberty.version>1.0.8</arquillian-liberty.version>
-        <cxf.version>3.5.2</cxf.version>
-        -->
 
         <!-- By default, skip tests -->
         <skipTests>true</skipTests>
@@ -210,9 +188,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>${maven-war-plugin.version}</version>
-                <configuration>
-                	<outputDirectory>${wildfly-deployment-path}</outputDirectory>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -279,16 +254,18 @@
                         <artifactId>wildfly-maven-plugin</artifactId>
                         <version>${wildfly-maven-plugin.version}</version>
                         <configuration>
-                        	<!-- if a wildfly.home property is not present, firstly it will download
+                            <!-- if a wildfly.home property is not present, firstly it will download
                                 a copy of wildfly distribution automatically -->
+                            
+                            <wildfly.home>/opt/wildfly/standalone</wildfly.home>
                             <!-- also fetch from jbossHome -->
                             <!-- <jossHome>${env.WILDFLY_HOME}</jbossHome>-->
 
                             <!-- control remote wildfly server -->
-                            <!-- <hostname></hostname>
-                            <port></port>
-                            <username></username>
-                            <password></password> -->
+                            <hostname>localhost</hostname>
+                            <port>8080</port>
+                            <username>john</username>
+                            <password>J0hn2o2o</password> 
 
                             <!-- or set a wildfly.id property to add a server in settings.xml -->
                             <!--<id>wildfly-svr</id> -->
@@ -501,6 +478,9 @@
             </build>
         </profile>
     </profiles>
+    
+    
+    
     <reporting>
         <plugins>
             <plugin>
@@ -512,15 +492,15 @@
     </reporting>
     <issueManagement>
         <system>Github Issues</system>
-        <url>https://github.com/hantsy/jakartaee8-starter/issues</url>
+        <url>https://github.com/7orcas/blue/issues</url>
     </issueManagement>
     <ciManagement>
         <system>Github Actions</system>
-        <url>https://github.com/hantsy/jakartaee8-starter/actions</url>
+        <url>https://github.com/7orcas/blue/actions</url>
     </ciManagement>
     <scm>
-        <url>https://github.com/hantsy/jakartaee8-starter</url>
-        <connection>scm:git:https://github.com/hantsy/jakartaee8-starter</connection>
-        <developerConnection>scm:git:https://github.com/hantsy/jakartaee8-starter</developerConnection>
+        <url>https://github.com/7orcas/blue</url>
+        <connection>scm:git:https://github.com/7orcas/blue</connection>
+        <developerConnection>scm:git:https://github.com/7orcas/blue</developerConnection>
     </scm>
 </project>
