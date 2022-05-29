@@ -292,12 +292,35 @@
 
                             <!-- or set a wildfly.id property to add a server in settings.xml -->
                             <!--<id>wildfly-svr</id> -->
-
+<outputDirectory>${wildfly-deployment-path}</outputDirectory>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
         </profile>
+        
+        <profile>
+            <!-- An optional Arquillian testing profile that
+                executes tests in your JBoss EAP instance -->
+            <!-- This profile will start a new JBoss EAP instance,
+                and execute the test, shutting it down when done -->
+            <!-- Run with: mvn clean test -Parq-wildfly-managed -->
+            <id>arq-wildfly-managed</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.wildfly.arquillian</groupId>
+                    <artifactId>wildfly-arquillian-container-managed</artifactId>
+                    <version>2.2.0.Final</version>
+                    <scope>test</scope>
+                    
+                </dependency>
+            </dependencies>
+        </profile>
+        
+        
         <profile>
 
             <!-- An optional Arquillian testing profile that executes tests in your
@@ -305,7 +328,12 @@
             <!-- This profile will start a new WildFly instance, and execute the test,
                 shutting it down when done -->
             <!-- Run with: mvn clean verify -Parq-wildfly-managed -->
-            <id>arq-wildfly-managed</id>
+            <id>arq-wildfly-managedXXXXX</id>
+ 
+ <activation>
+     <activeByDefault>true</activeByDefault>
+ </activation>
+            
             <properties>
                 <skipTests>false</skipTests>
                 <serverProfile>standalone-full.xml</serverProfile>
@@ -387,13 +415,16 @@
                 </plugins>
             </build>
         </profile>
+        
+        
+        
         <profile>
             <!-- An optional Arquillian testing profile that executes tests in a remote
                 WildFly instance -->
             <!-- Run with: mvn clean test -Parq-wildfly-remote -->
             <id>arq-wildfly-remote</id>
             <properties>
-                <skipTests>false</skipTests>
+                <skipTests>true</skipTests>
             </properties>
             <dependencies>
                 <dependency>
@@ -435,7 +466,7 @@
             <!-- Run with: mvn clean test -Parq-wildfly-embedded -->
             <id>arq-wildfly-embedded</id>
             <properties>
-                <skipTests>false</skipTests>
+                <skipTests>true</skipTests>
             </properties>
             <dependencies>
                 <dependency>

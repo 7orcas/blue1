@@ -15,5 +15,5 @@ Got running after doing: https://nickhumphreyit.blogspot.com/2018/09/solved-jbos
 Changed the version.wildfly.maven.plugin
 
 Use mvn clean test -Parq-wildfly-managed
-to run as managed. 
+to run as managed (ie a container is created at test time). 
 Can't get remote to work atm.

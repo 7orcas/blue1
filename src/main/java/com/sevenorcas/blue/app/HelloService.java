@@ -28,7 +28,7 @@ public class HelloService {
     	String xxx;
     	Connection conn;
     	Statement stmt;
-    	
+    	/*
     	xxx = "";
     	
     	try {
@@ -71,8 +71,8 @@ public class HelloService {
     	} catch (Exception x) {
     		x.printStackTrace();	
     	}
-    	
-        return "Hello " + name + ", and hello God and all!: " + xxx;
+    	*/
+        return "Hello " + name + ", and hello God and all!: "; // + xxx;
     }
 
 }
